@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* Fuentes */
+    --font-menu: 'Open Sans', sans-serif;
+
+    --font-color: #848484;
+}
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+li {
+    list-style: none;
+}
+
+/* -- Reset CSS */
+
+body {
+    font-family: var(--font-menu);
+    color: var(--font-color);
+}
+
+.header {
+    max-width: 93.75rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header__logo {
+    max-width: 7rem;
+    height: auto;
+    display: block;
+}
+
+.header__menu {
+    display: flex;
+
+    & ul {
+        display: flex;
+        padding: 1rem;
+        gap: 3rem;
+        margin: 0;
+
+        & a {
+            font-size: .75rem;
+            font-weight: 400;
+        }
+    }
+}
+
+
+.grid__container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    padding: 0 .3125rem;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 12.5rem;
+    grid-auto-flow: dense;
+
+}
+
+.grid__container img {
+    height: 100%;
+    display: block;
+}
+
+.grid__item--wide {
+    grid-column: span 2;
+}
+
+.grid__item--big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid__item--tall {
+    grid-row: span 2;
+}
+
+footer {
+    text-align: center;
+
+    & span {
+        display: block;
+        font-size: .8125rem;
+        padding: 1.4063rem 0;
+        ;
+    }
+}
+
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3.8125rem 0;
+    ;
+
+    & p {
+        max-width: 34rem;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+}
+
+.footer__logo {
+    width: 8rem;
+    height: auto;
+}
